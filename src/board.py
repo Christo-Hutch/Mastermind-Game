@@ -14,6 +14,13 @@ terminal_colors = {
     "BK": Back.BLACK
 }
 
+"""
+This class is used to create, manipulate and show the 2D array used to
+store the values within a board. At the beginning of every round, a new
+instance of a Board object is created and then discarded at the end.
+Code-maker responses are handled by a separate class, this class only
+handles the code-breaker attempts.
+"""
 class Board:
     def __init__(self, column_count: int, row_count: int):        
         if column_count < 1:
