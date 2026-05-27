@@ -58,10 +58,11 @@ class Round:
             raise ValueError("No remaining rows for board left!")
         
         self.board.change_row(row_num, row_data)
-        self.first_empty_row += 1
-        self.remaining_rows -= 1
         response = self.calculate_response(row_data)
         self.responses[row_num] = response
+
+        self.first_empty_row += 1
+        self.remaining_rows -= 1
 
         if response == (['●'] * self.board.num_of_columns):
             return True
