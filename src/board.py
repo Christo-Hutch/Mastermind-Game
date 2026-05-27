@@ -41,7 +41,7 @@ class Board:
     def get_formatted_row(self, row_num: int) -> str:
         colored_row_cells = [f"{self.colors[color]}  {Style.RESET_ALL}" for color in self.board[row_num]]
 
-        return f"[ " + " | ".join(colored_row_cells) + " ]"
+        return f"‖ " + " | ".join(colored_row_cells) + " ‖"
 
     def __str__(self) -> str:
         printable_board_lines: list = []
