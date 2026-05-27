@@ -9,6 +9,7 @@ class Round:
         self.first_empty_row: int = 0
         self.remaining_rows: int = board.num_of_rows
         self.code: list = self.generate_random_code()
+        self.isWon: bool = False
     
     @staticmethod
     def generate_response_list(column_count: int, row_count: int) -> list:
@@ -65,9 +66,7 @@ class Round:
         self.remaining_rows -= 1
 
         if response == (['●'] * self.board.num_of_columns):
-            return True
-        
-        return False
+            self.isWon = True
     
     def get_score(self) -> int:
         score = int(((self.remaining_rows/ self.board.num_of_rows) * 100))
