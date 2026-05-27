@@ -52,9 +52,9 @@ class Board:
         return "\n".join(printable_board_lines)
 
     # Returns True for a successful change or False for a failure
-    def change_row(self, row_num: int, row: list) -> bool:
-        if (0 <= row_num < self.num_of_rows) and (self.num_of_columns == len(row)):
-            self.board[row_num] = row[:]
+    def change_row(self, row_num: int, row_data: list) -> bool:
+        if (0 <= row_num < self.num_of_rows) and (self.num_of_columns == len(row_data)):
+            self.board[row_num] = row_data[:]
             return True
         
         return False
