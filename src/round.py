@@ -62,3 +62,8 @@ class Round:
             return True
         
         return False
+    
+    def get_score(self) -> int:
+        score = int(((self.remaining_rows/ self.board.num_of_rows) * 100))
+        
+        return score
