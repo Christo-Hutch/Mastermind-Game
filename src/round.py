@@ -69,6 +69,10 @@ class Round:
             self.isWon = True
     
     def get_score(self) -> int:
-        score = int(((self.remaining_rows/ self.board.num_of_rows) * 100))
+        if self.remaining_rows <= 0 and (not self.isWon):
+            score = 0
+        
+        else:
+            score = int(((self.board.num_of_rows - self.first_empty_row + 1) / self.board.num_of_rows) * 100)
 
         return score
