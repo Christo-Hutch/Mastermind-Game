@@ -53,13 +53,13 @@ class Round:
             print(self.get_row_response_formatted(r))
 
     # Returns True if the attempt was correct
-    def attempt_row(self, row_num: int, row_data: list):
+    def attempt_row(self, row_data: list):
         if self.remaining_rows <= 0:
             raise ValueError("No remaining rows for board left!")
         
-        self.board.change_row(row_num, row_data)
+        self.board.change_row(self.first_empty_row, row_data)
         response = self.calculate_response(row_data)
-        self.responses[row_num] = response
+        self.responses[self.first_empty_row] = response
 
         self.first_empty_row += 1
         self.remaining_rows -= 1
