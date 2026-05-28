@@ -2,6 +2,11 @@ from random import choices
 
 from board import Board
 
+"""
+This class is used to create and compare Code-maker responses to rows
+on the parsed Board object instance. This class also features methods
+to print rows of a board along with the related response.
+"""
 class Round:
     def __init__(self, board: Board):
         self.board: Board = board
