@@ -1,6 +1,8 @@
 from colorama import Style
 from math import trunc
 import re
+import os
+import subprocess
 
 def get_colors_tooltip(colors: dict) -> str:
     tooltip_list = []
@@ -17,3 +19,9 @@ def clean_user_input(user_input: str, valid_colors: list) -> list:
     cleaned_colors = [token.upper() for token in tokens if token.upper() in valid_colors]
 
     return cleaned_colors
+
+def clear_terminal():
+    if os.name == 'nt':
+        subprocess.run('cls', shell=True)
+    else:
+        subprocess.run('clear', shell=True)
