@@ -9,8 +9,6 @@ del colors["  "]
 
 while new_round.remaining_rows > 0 and not new_round.isWon:
     clear_terminal()
-
-    print(new_round.code) 
     
     new_round.print_round_board()
     print(f"You can enter {new_board.num_of_columns} colors:\n" + get_colors_tooltip(colors))
