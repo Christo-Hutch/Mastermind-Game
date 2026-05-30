@@ -2,6 +2,12 @@ from round import Round
 from board import Board
 from utils import get_colors_tooltip, clean_user_input, clear_terminal
 
+"""
+This class is used to start rounds through the use of the methods
+within the 'Round' class. When an object is created, it must initalise
+with parameters describing the number of rounds and a list of dictionaries
+containing the config for each round (dimensions of board, etc.).
+"""
 class Game:
     def __init__(self, round_count: int, rounds_config: list):
         if round_count < 1:
