@@ -4,6 +4,9 @@ from utils import get_colors_tooltip, clean_user_input, clear_terminal
 
 class Game:
     def __init__(self, round_count: int, rounds_config: list):
+        if round_count < 1:
+            raise ValueError("'round_count' can not be less than 1")
+        
         if len(rounds_config) != round_count:
             raise ValueError(f"'rounds_config' doesn't contain {round_count} dictionary configs")
         
