@@ -25,7 +25,7 @@ class Game:
         self.total_score: float = 0.0
 
     def play_round(self, round_num: int, row_count: int, column_count: int):
-        new_board = Board(row_count, column_count)
+        new_board = Board(column_count, row_count)
         new_round = Round(new_board)
         colors = new_board.colors.copy()
         del colors["  "]
