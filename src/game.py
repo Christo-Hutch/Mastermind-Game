@@ -61,6 +61,8 @@ class Game:
 
         print(f"Total Game Score: {self.total_score}")
 
+        input("Press Enter To Continue")
+
     def play_game(self):
         for round_num in range(1, self.round_count + 1):
             self.play_round(round_num, self.rounds_config[round_num - 1]["rows"], self.rounds_config[round_num - 1]["columns"])
