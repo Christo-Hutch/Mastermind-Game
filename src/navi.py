@@ -36,10 +36,9 @@ class MenuNavi:
                 MenuNavi.view_guide()
 
             case 2:
-                pass
+                return None
 
-            case _:
-                MenuNavi.main_menu()
+        MenuNavi.main_menu()
 
     @staticmethod
     def select_game_menu():
@@ -123,3 +122,5 @@ class MenuNavi:
 
             case _:
                 MenuNavi.multi_round_menu()
+
+        MenuNavi.select_game_menu()
