@@ -33,7 +33,7 @@ class MenuNavi:
                 MenuNavi.select_game_menu()
 
             case 1:
-                pass
+                MenuNavi.view_guide()
 
             case 2:
                 pass
@@ -59,6 +59,12 @@ class MenuNavi:
 
             case _:
                 MenuNavi.select_game_menu()
+
+    @staticmethod
+    def view_guide():
+        print("---Guide---")
+        print("WORK IN PROGRESS")
+        input("Press Enter To Continue")
 
     @staticmethod
     def single_round_menu():
