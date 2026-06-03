@@ -52,7 +52,7 @@ class MenuNavi:
                 MenuNavi.single_round_menu()
 
             case 1:
-                pass
+                MenuNavi.multi_round_menu()
 
             case 2:
                 MenuNavi.main_menu()
