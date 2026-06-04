@@ -1,0 +1,26 @@
+{
+  "short": {
+    "round_count": 2,
+    "round_configs": [
+      { "columns": 4, "rows": 10 },
+      { "columns": 4, "rows": 10 }
+    ]
+  },
+  "normal": {
+    "round_count": 3,
+    "round_configs": [
+      { "columns": 4, "rows": 10 },
+      { "columns": 4, "rows": 8 },
+      { "columns": 4, "rows": 6 }
+    ]
+  },
+  "long": {
+    "round_count": 4,
+    "round_configs": [
+      { "columns": 4, "rows": 10 },
+      { "columns": 4, "rows": 10 },
+      { "columns": 4, "rows": 8 },
+      { "columns": 4, "rows": 6 }
+    ]
+  }
+}
