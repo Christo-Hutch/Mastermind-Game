@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 from game import Game
+from utils import clear_terminal
 
 current_dir = Path(__file__).resolve().parent
 
@@ -59,6 +60,7 @@ class MenuNavi:
 
             case 1:
                 MenuNavi.view_guide()
+                clear_terminal()
 
             case 2:
                 return None
