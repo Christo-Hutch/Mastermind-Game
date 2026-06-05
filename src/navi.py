@@ -63,6 +63,7 @@ class MenuNavi:
                 clear_terminal()
 
             case 2:
+                print("Quitting Mastermind Game!")
                 return None
 
         MenuNavi.main_menu()
