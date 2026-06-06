@@ -8,6 +8,7 @@ When a game is started, the player will be shown an empty board along with a gui
 - Can be lower/uppercase.
 - Must contain the same number of colours as there are columns on the board.
 - Attempts are submitted by pressing the 'Enter' key.
+
 After each attempt is submitted, the player will receive a sequence of solid dots, hollow dots and empty spaces. The position of these dots is not related to the correct colour sequence.
 - Solid dot: Correct colour in the correct position
 - Hollow dot: Correct colour but in the wrong position
