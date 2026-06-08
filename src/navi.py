@@ -7,10 +7,11 @@ from utils import clear_terminal
 
 current_dir = Path(__file__).resolve().parent
 
-json_dir = current_dir.parent / "data"
+data_dir = current_dir.parent / "data"
 
-single_round_path = json_dir / "single_round_difficulties.json"
-multi_round_path = json_dir / "multi_round_modes.json"
+single_round_path = data_dir / "single_round_difficulties.json"
+multi_round_path = data_dir / "multi_round_modes.json"
+guide_path = data_dir / "guide.txt"
 
 class MenuNavi:
     def __init__(self, user: str):
@@ -89,8 +90,15 @@ class MenuNavi:
 
     @staticmethod
     def view_guide():
-        print("---Guide---")
-        print("WORK IN PROGRESS")
+        try:
+            with open(guide_path, "r", encoding="utf-8") as file:
+                content = file.read()
+                print(content + "\n")
+        except FileNotFoundError:
+            print(f"Error: The file at '{guide_path}' was not found.")
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+        
         input("Press Enter To Continue")
 
     @staticmethod
