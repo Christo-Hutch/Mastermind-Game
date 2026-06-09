@@ -13,6 +13,11 @@ single_round_path = data_dir / "single_round_difficulties.json"
 multi_round_path = data_dir / "multi_round_modes.json"
 guide_path = data_dir / "guide.txt"
 
+"""
+This class is used for navigating throughout the game menus. These menus
+allow for the starting of different game modes as well as viewing guides
+and editing settings.
+"""
 class MenuNavi:
     def __init__(self, user: str):
         self.user = user
