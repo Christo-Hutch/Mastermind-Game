@@ -1,0 +1,54 @@
+================================================================================
+                          MASTERMIND: THE STRATEGY GUIDE
+================================================================================
+
+Welcome to the ultimate guide for Mastermind, the classic game of logic, 
+deduction, and code-breaking. This guide covers the rules, the scoring system, 
+and advanced strategies to help you break any code in fewer guesses.
+
+--------------------------------------------------------------------------------
+1. GAME OVERVIEW & OBJECTIVE
+--------------------------------------------------------------------------------
+Mastermind is a puzzle game played between two roles:
+*   The Codebreaker (You): Tries to guess a secret combination of colored pegs.
+*   The Codemaker (The AI/Host): Creates a hidden 4-peg code and provides feedback.
+
+The standard game consists of a secret code made up of 4 positions, using a pool 
+of unique colors. Duplicates and blanks may or may not be allowed depending on 
+your specific ruleset. You have a limited number of attempts (usually 10 or 12) to
+accurately guess the hidden sequence.
+
+--------------------------------------------------------------------------------
+2. THE FEEDBACK SYSTEM (THE CLUES)
+--------------------------------------------------------------------------------
+After every guess you submit, the Codemaker provides evaluation pegs to reveal 
+how close your guess is. Understanding these specific symbols is key to winning:
+
+●  [BLACK / SOLID PEG]   = Correct Color & Correct Position
+   This means one of your guessed colors is exactly right and sits in the 
+   correct spot. (Note: The feedback pegs do NOT tell you *which* position is 
+   the correct one; they just tell you that one exists).
+
+○  [WHITE / HOLLOW PEG] = Correct Color but Incorrect Position
+   This means you guessed a color that exists somewhere within the secret code, 
+   but it is currently sitting in the wrong position.
+
+' ' [EMPTY SPACE]       = Incorrect Color
+   This means the guessed color does not exist anywhere in the remaining unmapped 
+   slots of the secret code. It is a complete mismatch.
+
+--- EXAMPLES ---
+Suppose the Secret Code is:  [ Red ] [ Blue ] [ Green ] [ Yellow ]
+
+*   Your Guess: [ Red ] [ Pink ] [ Orange ] [ Purple ]
+    Feedback:   ● ' ' ' '
+    (The Red is correct and in the right spot. The others are completely wrong.)
+
+*   Your Guess: [ Blue ] [ Red ] [ Green ] [ Yellow ]
+    Feedback:   ● ● ○ ○
+    (Green and Yellow are in the right positions [● ●]. Red and Blue are correct 
+    colors but swapped into wrong positions [○ ○].)
+
+*   Your Guess: [ Yellow ] [ Green ] [ Blue ] [ Red ]
+    Feedback:   ○ ○ ○ ○
+    (All four colors are correct, but every single one is in the wrong spot.)
