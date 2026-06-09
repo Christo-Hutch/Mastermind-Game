@@ -1,6 +1,7 @@
 from simple_term_menu import TerminalMenu
 import json
 from pathlib import Path
+import sys
 
 from game import Game
 from utils import clear_terminal
@@ -70,7 +71,7 @@ class MenuNavi:
 
             case 2:
                 print("Quitting Mastermind Game!")
-                return None
+                sys.exit()
 
         MenuNavi.main_menu()
 
